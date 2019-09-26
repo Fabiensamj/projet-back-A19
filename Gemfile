@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/Fabiensamj/projet-back-A19.git" }
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.3.3'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
@@ -33,7 +34,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '1.4.1', require: false
+gem 'bootsnap', '1.4.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,9 +46,10 @@ group :development do
   gem 'web-console', '>= 3.3.0'
 end
 
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 3.15.0'
+  gem 'capybara', '3.15.0'
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
@@ -55,5 +57,3 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-#installation de rubocop
-gem 'rubocop', require: false
