@@ -4,8 +4,6 @@
 language: ruby
 rvm:
  - 2.3.3
-install:
-- bundle install
 
 
 env:
