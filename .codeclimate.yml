@@ -1,5 +1,4 @@
 plugins:
   rubocop:
     enabled: true
-    config:
-      file: my_rubocop.yml
+  
