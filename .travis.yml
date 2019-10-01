@@ -1,18 +1,15 @@
 env:
   global:
-    - 
-CC_TEST_REPORTER_ID=1bf142ff11d12ce2c1c767f94f2d18d7a49c58a120a985096f9fce08a77eaaa3
-
+    - CC_TEST_REPORTER_ID=1bf142ff11d12ce2c1c767f94f2d18d7a49c58a120a985096f9fce08a77eaaa3
 language: ruby
 rvm:
  - 2.3.3
-
 before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
-  - ./cc-test-reporter before-build
+  - "./cc-test-reporter before-build"
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
   - bundle exec rake
 after_script:
-  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+  - "./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT"
