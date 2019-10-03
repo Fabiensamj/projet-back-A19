@@ -13,5 +13,6 @@ after_script:
   - './cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT'
 script:
   - bundle exec rails db:migrate RAILS_ENV=test
+  - bin/rails db:migrate RAILS_ENV=test
   - bundle exec rake
  
