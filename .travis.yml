@@ -24,4 +24,6 @@ deploy:
   api_key:
     secure: "daa0c38a-85cc-4782-9cbd-0c6fd15dc975"
   app: projet-back-A19
+  on:
+    repo: fabiensamj/projet-back-A19
  
