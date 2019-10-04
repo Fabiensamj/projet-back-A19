@@ -1,7 +1,7 @@
 
 language: ruby
 rvm:
- - 2.6.5
+ - 2.3.3
 install:
 - bundle install
 
@@ -19,11 +19,3 @@ script:
   - bundle exec rake
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-#deploy:
- # provider: heroku
-  #api_key:
-   # secure: "daa0c38a-85cc-4782-9cbd-0c6fd15dc975"
-  #app: projet-back-A19
-  #on:
-   # repo: fabiensamj/projet-back-A19
- 
