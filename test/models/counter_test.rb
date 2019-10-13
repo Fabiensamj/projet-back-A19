@@ -1,10 +1,12 @@
 require 'test_helper'
 
 class CounterTest < ActiveSupport::TestCase
-  test "should increment counter" do
-    old_value = @counter.value
-    patch counter_url(@counter)
-    assert old_value + 1 == Counter.find(@counter.id).value 
-    assert_redirected_to counter_url(@counter)
+  test "should have the necessary required validators" do
+    counter = Counter.new
+    counter.value = 0
+
+    counter.increment!
+
+    assert counter.value == 1
   end
 end
